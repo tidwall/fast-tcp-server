@@ -89,7 +89,7 @@ func main() {
 	events.Tick = func() (delay time.Duration, action evio.Action) {
 		if ticks > 0 {
 			if ticks%5 == 4 {
-				log.Printf("period: (unique: %d, duplicates: %d), totals: (uniques: %d, request: %d)", puniques, pduplicates, len(numbers), requests)
+				log.Printf("period: (unique: %d, duplicates: %d), totals: (uniques: %d, requests: %d)", puniques, pduplicates, len(numbers), requests)
 				puniques, pduplicates = 0, 0
 			}
 			if ticks%10 == 9 {
